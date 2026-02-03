@@ -14,6 +14,7 @@ type TourCanvasProps = {
 
 function Scene({ collectedIds, onSelectHotspot }: Omit<TourCanvasProps, 'selectedId'>) {
   const radius = 7.6
+  const panoramaSrc = `${import.meta.env.BASE_URL}assets/panorama.jpg`
 
   const hotspotPositions = useMemo(() => {
     return HOTSPOTS.map((h) => ({
@@ -30,7 +31,7 @@ function Scene({ collectedIds, onSelectHotspot }: Omit<TourCanvasProps, 'selecte
       <directionalLight position={[4, 3, 2]} intensity={1.0} />
 
       <Suspense fallback={null}>
-        <PanoramaSphere src={'/assets/panorama.jpg'} radius={8} />
+        <PanoramaSphere src={panoramaSrc} radius={8} />
       </Suspense>
 
       {hotspotPositions.map((h) => (
