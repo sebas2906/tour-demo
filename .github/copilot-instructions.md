@@ -1,0 +1,5 @@
+- Tech stack: React + TypeScript + Vite + Tailwind v4 + Three.js (@react-three/fiber, @react-three/drei).
+- 360 panorama: keep the default file at public/assets/panorama.jpg (equirectangular JPG).
+- Hotspots data lives in src/tour/hotspots.ts; prefer adding hotspots by editing data (yaw/pitch + quiz + copy).
+- Visual/UX: use Tailwind utility classes (avoid adding new CSS files unless necessary).
+- Keep the tour playable on mobile (no heavy assets, avoid 8K textures by default).
